@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Backoffice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="loginContainer" class="card">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="User ID" />
+      <input type="password" id="pin" placeholder="PIN" />
+      <button onclick="loginUser()">Login</button>
+      <p id="loginLoading"></p>
+      <p id="loginError" class="error"></p>
+    </div>
+
+    <div id="mainContainer" class="card hidden">
+      <h2>Halo, <span id="userDisplay"></span></h2>
+
+      <div id="saldoContainer">
+        Saldo: <span id="saldoDisplay">Rp 0</span>
+        <button onclick="loadSaldo()">🔄 Refresh Saldo</button>
+      </div>
+
+      <div class="flex-buttons">
+        <button onclick="showForm('setor')">➕ Setor</button>
+        <button onclick="showForm('tarik')">➖ Tarik</button>
+      </div>
+
+      <div id="transaksiForm" class="hidden">
+        <input type="number" id="nominalInput" placeholder="Nominal" />
+        <button onclick="submitTransaksi()">Kirim</button>
+      </div>
+
+      <button onclick="loadHistori()">📜 Histori</button>
+      <div id="loadingMsg"></div>
+      <div id="historiContainer"></div>
+
+      <button onclick="goToGame()">🎮 Masuk Game</button>
+      <button onclick="showProfile()">👤 Profil</button>
+      <div id="profileContainer" class="hidden"></div>
+
+      <div class="logout-social">
+        <button onclick="logout()">🚪 Logout</button>
+        <button onclick="window.open('https://wa.me/6281234567890','_blank')">💬 WhatsApp</button>
+        <button onclick="window.open('https://t.me/username','_blank')">📢 Telegram</button>
+        <button onclick="window.open('#','_blank')">💻 Livechat</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

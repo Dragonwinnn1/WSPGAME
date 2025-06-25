@@ -1,0 +1,185 @@
+/* Body umum */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #eee;
+}
+
+/* Container utama */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Card style */
+.card {
+  background: #1e1e2e;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  max-width: 520px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+}
+
+/* Judul */
+h2 {
+  text-align: center;
+  color: #00f5d4;
+  margin-bottom: 20px;
+}
+
+/* Input dan button */
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+input {
+  background: #2b2b3c;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00f5d4;
+}
+
+button {
+  background: #00f5d4;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00e0c6;
+}
+
+/* Tombol sejajar */
+.flex-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.flex-buttons button {
+  flex: 1;
+  min-width: 45%;
+}
+
+/* Saldo box */
+#saldoContainer {
+  background: #2c2c3c;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid #444;
+  font-size: 18px;
+}
+
+/* Loading dan error */
+#loadingMsg,
+#loginLoading {
+  text-align: center;
+  color: yellow;
+  font-style: italic;
+}
+
+#loginError {
+  color: red;
+  text-align: center;
+}
+
+/* Form transaksi */
+#transaksiForm input {
+  margin-top: 5px;
+  border: 1px solid #555;
+}
+
+/* Logout dan link sosial */
+.logout-social {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logout-social button {
+  margin: 5px;
+  background: #444;
+  color: #fff;
+  border: 1px solid #666;
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.logout-social button:hover {
+  background: #555;
+}
+
+/* Histori tampilan */
+#historiContainer {
+  margin-top: 20px;
+}
+
+#historiContainer h3 {
+  color: #00f5d4;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+#historiContainer p {
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 5px 0;
+  border: 1px solid #333;
+  font-size: 15px;
+}
+
+/* Profil */
+#profileContainer {
+  background: #2a2a3a;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+#profileContainer p {
+  margin: 5px 0;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  .flex-buttons {
+    flex-direction: column;
+  }
+}
